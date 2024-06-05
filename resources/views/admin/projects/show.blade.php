@@ -17,7 +17,7 @@
         </div>        
             <div class="col-2">
                 @auth
-                    <a href="{{route('admin.projects.update',$project)}}" class="px-2">Update</a>
+                    <a href="{{route('admin.projects.edit', $project)}}" class="px-2">Update</a>
                 @endif
             <a href="{{route('admin.projects.index')}}">Go Back</a>
             </div>

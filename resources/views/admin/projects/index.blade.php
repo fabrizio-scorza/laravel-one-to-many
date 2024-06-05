@@ -23,30 +23,43 @@
         <tbody>
             @foreach ($projects as $project)
                 <tr>
-                    <td scope="row" class="py-3">{{$project->name}}</td>
+                    <td scope="row">{{$project->name}}</td>
                     <td>
-                        <a href="{{$project->link}}"  class="btn btn-link link-secondary text-start">{{$project->link}}</a>
+                        <a href="{{$project->link}}"  class="link-secondary">{{$project->link}}</a>
                     </td>
-                    <td class="py-3">{{$project->type ? $project->type->name : 'Nessuna categoria'}}</td>                
+                    <td>{{$project->type ? $project->type->name : 'Nessuna categoria'}}</td>                
                     <td>
-                        <a class="btn btn-link link-secondary" href="{{route('admin.projects.show',$project)}}">Details</a>
+                        <a class="link-secondary" href="{{route('admin.projects.show',$project)}}">Details</a>
                     </td>
                     <td>
-                        @auth
-                            <form action="{{ route('admin.projects.destroy',$project) }}" method="POST">
-                    
-                                @csrf
-                                @method('DELETE')
-            
-                                <button class="btn btn-link link-danger">Delete</button>
-                            
-                            </form>
+                        @auth            
+                            <a class="link-danger delete" data-bs-toggle="modal" data-bs-target="#modal">Delete</a>
                         @endif
                     </td>                
                 </tr>   
             @endforeach        
         </tbody>
     </table>    
+</div>
+
+<div class="modal" tabindex="-1" id="modal" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">            
+            <div class="modal-body">
+                <p>ALLERT: if u click on yes your project will permanently deleted. Do you want to delete your project permanently?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">NO</button>
+                <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                    
+                    @csrf
+                    @method('DELETE')
+
+                    <button class="btn btn-danger delete">YES</button>
+                </form> 
+            </div>
+      </div>
+    </div>
 </div>
 
     

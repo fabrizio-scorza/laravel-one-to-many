@@ -7,7 +7,7 @@
 <div class="container">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="fs-2 my-5">Create a new Project</h2>
-    <a href="{{route('admin.projects.index')}}">Go Back</a>
+    <a href="{{route('admin.projects.index')}}" class="link-secondary">Go Back</a>
   </div>
 </div>
   

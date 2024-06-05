@@ -7,7 +7,7 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center">
         <h2 class="fs-2 my-5">Edit Project</h2>
-        <a href="{{route('admin.projects.show',$project)}}">Go Back</a>
+        <a href="{{route('admin.projects.show',$project)}}" class="link-secondary">Go Back</a>
     </div>
   </div>
   

@@ -5,7 +5,10 @@
 @section('content')
 
 <div class="container">
-    <h2 class="fs-2 my-5">Create a new Project</h2>
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="fs-2 my-5">Edit Project</h2>
+        <a href="{{route('admin.projects.show',$project)}}">Go Back</a>
+    </div>
   </div>
   
   <div class="container">

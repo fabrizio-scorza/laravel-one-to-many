@@ -38,7 +38,7 @@
         <input type="url" min="1" max="100" name="link" class="form-control" id="link" value="{{ old('link') }}">
       </div>  
 
-      <button class="btn btn-secondary">Crea</button>
+      <button class="btn btn-secondary">Create</button>
     </form>
     @if ($errors->any())
             <div class="alert alert-danger mt-3">

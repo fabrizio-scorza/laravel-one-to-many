@@ -19,7 +19,15 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    <a href="{{route('admin.projects.index')}}">Projects</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{route('admin.projects.index')}}">Projects</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.types.index')}}">Types</a>
+                        </li>                        
+                    </ul>
+                    
                 </div>
             </div>
         </div>

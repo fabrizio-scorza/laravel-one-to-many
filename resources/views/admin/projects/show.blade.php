@@ -22,7 +22,7 @@
         {{$project->description}}
     </p>
     <a href="{$project->link}}" class="link-secondary">{{$project->link}}</a>
-    <p class="pt-3">Type: {{$project->type ? $project->type->name : 'Nessuna categoria'}}</p>
+    <p class="pt-3">Type: {{$project->type ? $project->type->name : 'No Type'}}</p>
 </div>   
 
 <div class="modal" tabindex="-1" id="modal" aria-labelledby="modal-label" aria-hidden="true">

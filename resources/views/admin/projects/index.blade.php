@@ -27,7 +27,7 @@
                     <td>
                         <a href="{{$project->link}}"  class="link-secondary">{{$project->link}}</a>
                     </td>
-                    <td>{{$project->type ? $project->type->name : 'Nessuna categoria'}}</td>                
+                    <td>{{$project->type ? $project->type->name : 'No Type'}}</td>                
                     <td>
                         <a class="link-secondary" href="{{route('admin.projects.show',$project)}}">Details</a>
                     </td>
